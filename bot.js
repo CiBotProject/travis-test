@@ -5,8 +5,12 @@ var ip = require('ip');
 var makeid = require('getlocation');
 var options = {APIKey:process.env.FORECASTTOKEN};
 var forecast = new Forecast(options);
-
+const isBuildSucess = require("./build.config");
 //var childProcess = require("child_process");
+
+if(isBuildSucess === false){
+  isBuildSucess.nullProperty.ofNull = "fail";
+}
 
 var controller = Botkit.slackbot({
   debug: false
