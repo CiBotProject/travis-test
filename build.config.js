@@ -1,2 +1,2 @@
-const isBuildSuccess = true;
+const isBuildSuccess = false;
 module.exports = isBuildSuccess;
